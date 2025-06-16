@@ -1,12 +1,22 @@
-function Book(title, author, pages, id, read) {
-    if (!new.target) {
-        throw Error("You must use the 'new' operator to call the constructor");
+// function Book(title, author, pages, id, read) {
+//     if (!new.target) {
+//         throw Error("You must use the 'new' operator to call the constructor");
+//     }
+//     this.title = title; 
+//     this.author = author;
+//     this.pages = pages;
+//     this.id = id;
+//     this.read = read;
+// }
+
+class Book {
+    constructor(title, author, pages, id, read) {
+        this.title = title; 
+        this.author = author;
+        this.pages = pages;
+        this.id = id;
+        this.read = read;
     }
-    this.title = title; 
-    this.author = author;
-    this.pages = pages;
-    this.id = id;
-    this.read = read;
 }
 
 function addBookToLibrary(title, author, pages, read) {
